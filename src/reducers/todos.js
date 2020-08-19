@@ -16,9 +16,19 @@ const todos = (state = [], action) => {
           : todo
       )
     case 'DELETE_COMPLETED' :
+      console.log('delete');
       return state.filter(t => !t.completed)
+
+     case 'COPY_TODO' :
+       console.log('copy');
+       return [
+        ...state,
+        {id: action.id + 1,
+        text: action.text,
+        completed:false}
+      ]
     default:
-      return state
+      return state;
   }
 }
 

@@ -25,3 +25,9 @@ export const VisibilityFilters = {
 export const deleteCompleted = {
   type: 'DELETE_COMPLETED'
 }
+
+export const copyTodo = (id, text) =>({
+  type: 'ADD_TODO',
+  id,
+  text
+})

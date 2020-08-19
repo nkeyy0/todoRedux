@@ -1,7 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import CopyButtonTodo from '../containers/CopyButtonTodo'
 
-const Todo = ({ onClick, completed, text }) => (
+
+const Todo = ({ onClick, completed, text, id }) => (
+  <React.Fragment>
   <li
     onClick={onClick}
     style={{
@@ -10,6 +13,10 @@ const Todo = ({ onClick, completed, text }) => (
   >
     {text}
   </li>
+  <CopyButtonTodo text = {text}
+                  id = {id + Math.random()}
+  />
+  </React.Fragment>
 )
 
 Todo.propTypes = {

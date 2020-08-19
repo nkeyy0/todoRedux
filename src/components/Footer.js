@@ -3,6 +3,7 @@ import FilterLink from '../containers/FilterLink'
 import ButtonDeleteCompleted from '../containers/ButtonDeleteCompleted'
 import { VisibilityFilters } from '../actions'
 
+
 const Footer = () => (
   <div>
     <span>Show: </span>
